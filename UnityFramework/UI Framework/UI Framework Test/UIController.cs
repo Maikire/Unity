@@ -9,7 +9,7 @@ namespace Default
     /// <summary>
     /// 处理游戏流程（与UI相关的）
     /// </summary>
-    public class UIController : GameController
+    public class UIController : MonoSingleton<UIController>
     {
         protected override void BeforeGameStart()
         {
