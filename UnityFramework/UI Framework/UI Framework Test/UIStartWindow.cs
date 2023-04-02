@@ -20,6 +20,9 @@ namespace Default
         {
             GetUIEventListener("Start").PointerClick += OnStartButtonClick;
             GetUIEventListener("Setting").PointerClick += OnSettingButtonClick;
+            
+            //使用Unity事件
+            //GetUIEventListener("Start").PointerClick.AddListener(OnBaseButtonClick);
         }
 
         /// <summary>
