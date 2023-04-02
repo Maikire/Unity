@@ -6,16 +6,28 @@ using UnityEngine.EventSystems;
 
 namespace UIFramework
 {
-    public delegate void PointerEventHandler(PointerEventData eventData);
-    public delegate void BaseEventHandler(BaseEventData eventData);
-    public delegate void AxisEventHandler(AxisEventData eventData);
-
     /// <summary>
     /// UI事件监听器，提供所有能用到的UGUI事件（带事件参数类）。
     /// 脚本添加到需要交互的UI
     /// </summary>
     public class UIEventListener : MonoBehaviour, IPointerClickHandler, IPointerDownHandler, IPointerUpHandler, IPointerEnterHandler, IPointerExitHandler, IInitializePotentialDragHandler, IBeginDragHandler, IDragHandler, IEndDragHandler, IDropHandler, IScrollHandler, IUpdateSelectedHandler, ISelectHandler, IDeselectHandler, IMoveHandler, ISubmitHandler, ICancelHandler, IEventSystemHandler
-    {
+    {    
+    
+        public delegate void PointerEventHandler(PointerEventData eventData);
+        public delegate void BaseEventHandler(BaseEventData eventData);
+        public delegate void AxisEventHandler(AxisEventData eventData);
+
+        /* 使用UnityEvent 
+        //[Serializable]
+        //public class PointerEventHandler : UnityEvent<PointerEventData> { }
+        //[Serializable]
+        //public class BaseEventHandler : UnityEvent<BaseEventData> { }
+        //[Serializable]
+        //public class AxisEventHandler : UnityEvent<AxisEventData> { }
+
+        //public PointerEventHandler PointerClick;
+         */
+
         public event PointerEventHandler PointerClick;
         public event PointerEventHandler PointerDown;
         public event PointerEventHandler PointerUp;
