@@ -1,4 +1,3 @@
-using ARPGDemo.Character;
 using System;
 using UnityEngine;
 using UnityEngine.Events;
