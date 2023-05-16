@@ -13,15 +13,15 @@ namespace Common
         //实际的使用过程中，需要什么事件就在这个脚本里添加
 
         [Serializable]
-        public class AttackEventHandler : UnityEvent { }
+        public class AnimEventHandler : UnityEvent { }
 
         [Serializable]
-        public class AnimEventHandler : UnityEvent { }
+        public class AttackEventHandler : UnityEvent { }
 
         private Animator Anim;
         public AnimEventHandler CancelAnim;
-        public AttackEventHandler TargetAttack;
-        public AttackEventHandler DirectionAttack;
+        public AttackEventHandler MeleeAttack;
+        public AttackEventHandler RemoteAttack;
 
         private void Awake()
         {
@@ -45,7 +45,7 @@ namespace Common
         /// </summary>
         private void OnMeleeAttack()
         {
-            TargetAttack?.Invoke();
+            MeleeAttack?.Invoke();
         }
 
         /// <summary>
@@ -53,7 +53,7 @@ namespace Common
         /// </summary>
         private void OnRemoteAttack()
         {
-            DirectionAttack?.Invoke();
+            RemoteAttack?.Invoke();
         }
 
     }
