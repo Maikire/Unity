@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace ARPGDemo.Character
@@ -12,13 +10,13 @@ namespace ARPGDemo.Character
     /// </summary>
     public class AnimationParameter
     {
+        [Tooltip("跑步")]
         public string Run = "run";
+
+        [Tooltip("死亡")]
         public string Death = "death";
+
+        [Tooltip("闲置")]
         public string Idle = "idle";
-        //public string Attack1 = "attack1";
-        //public string Attack2 = "attack2";
-        //public string Attack3 = "attack3";
-
-
     }
 }
