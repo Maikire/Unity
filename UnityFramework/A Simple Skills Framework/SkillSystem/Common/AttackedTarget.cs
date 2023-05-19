@@ -1,5 +1,3 @@
-﻿using System;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace ARPGDemo.Skill
@@ -8,6 +6,7 @@ namespace ARPGDemo.Skill
     {
         [Tooltip("被攻击过的目标")]
         public Transform Target;
+
         [Tooltip("被攻击的次数")]
         public int Times;
 
