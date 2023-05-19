@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace ARPGDemo.Character
@@ -51,13 +49,11 @@ namespace ARPGDemo.Character
 
                 //移动动画
                 PlayerAnimator.SetBool(Status.PlayerAnimationParameter.Run, true);
-                PlayerAnimator.SetBool(Status.PlayerAnimationParameter.Idle, false);
             }
             else
             {
                 //闲置动画
                 PlayerAnimator.SetBool(Status.PlayerAnimationParameter.Idle, true);
-                PlayerAnimator.SetBool(Status.PlayerAnimationParameter.Run, false);
             }
         }
 
