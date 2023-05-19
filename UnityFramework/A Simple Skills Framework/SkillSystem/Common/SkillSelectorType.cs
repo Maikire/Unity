@@ -5,7 +5,10 @@ namespace ARPGDemo.Skill
     public enum SkillSelectorType
     {
         [Tooltip("扇形/圆形")]
-        Sector
-        //Rectangle
+        Sector,
+
+        //[Tooltip("矩形")]
+        //Rectangle,
+
     }
 }
