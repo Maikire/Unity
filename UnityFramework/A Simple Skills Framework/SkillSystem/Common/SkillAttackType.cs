@@ -1,11 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
+using UnityEngine;
 
 namespace ARPGDemo.Skill
 {
     public enum SkillAttackType
     {
+        [Tooltip("单攻")]
         Single,
-        Group
+
+        [Tooltip("群攻")]
+        Group,
+
     }
 }
