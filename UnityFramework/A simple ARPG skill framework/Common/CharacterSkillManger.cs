@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace ARPGDemo.Skill
 {
-    [RequireComponent(typeof(PlayerStatus))]
+    [RequireComponent(typeof(CharacterStatus))]
     /// <summary>
     /// 技能管理器
     /// </summary>
