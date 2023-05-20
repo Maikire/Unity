@@ -39,7 +39,7 @@ namespace ARPGDemo.Character
         /// </summary>
         public void JoystickMove()
         {
-            if (!IsMove) return;
+            if (Status.HP <= 0 || !IsMove) return;
 
             Vector3 direction = Vector3.forward * MainJoystick.Vertical + Vector3.right * MainJoystick.Horizontal;
 
