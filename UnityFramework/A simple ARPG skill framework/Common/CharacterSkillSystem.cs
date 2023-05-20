@@ -14,6 +14,10 @@ namespace ARPGDemo.Skill
         protected CharacterSkillManger SkillManger;
         protected AnimationEventBehaviour EventBehaviour;
         private Animator Anim;
+        /// <summary>
+        /// true: 技能成功释放
+        /// </summary>
+        protected bool SuccessfullyUsed;
 
         //处理特殊情况：在一个技能释放的过程中释放其他技能
         //MOBA、拳皇等游戏会使用队列（或列表）
@@ -33,6 +37,7 @@ namespace ARPGDemo.Skill
         protected virtual void Start()
         {
             Skill = null; //脚本挂在物体上就会生成一个 SkillData 对象，这个对象没有任何意义
+            SuccessfullyUsed = false;
 
             EventBehaviour.MeleeAttack.AddListener(DeploySkill);
             EventBehaviour.RemoteAttack.AddListener(DeploySkill);
@@ -52,11 +57,19 @@ namespace ARPGDemo.Skill
             }
 
             //判断动画的播放状态
-            if (Skill != null && Anim.GetBool(Skill.AnimationName)) return;
+            if (Skill != null && Anim.GetBool(Skill.AnimationName))
+            {
+                SuccessfullyUsed = false;
+                return;
+            }
 
             //准备技能
             Skill = SkillManger.PrepareSkill(skillID);
-            if (Skill == null) return;
+            if (Skill == null)
+            {
+                SuccessfullyUsed = false;
+                return;
+            }
 
             //技能冷却
             SkillManger.StartCoroutine(SkillManger.CoolTimer(Skill));
@@ -72,6 +85,8 @@ namespace ARPGDemo.Skill
             {
                 this.transform.LookAtTarget(Skill.AttackTargets?[0]);
             }
+
+            SuccessfullyUsed = true;
         }
 
         /// <summary>
@@ -107,19 +122,6 @@ namespace ARPGDemo.Skill
             IAttackSelector selector = DeployerFactory.CreateAttackSelector(Skill); //攻击选区
             Transform[] targets = selector.SelectTarget(Skill, this.transform);
             return targets == null || targets.Length == 0 ? null : targets;
-        }
-
-        /// <summary>
-        /// 朝向目标，仅沿Y轴旋转
-        /// </summary>
-        /// <param name="target">目标</param>
-        private void LookAtTarget(Transform target)
-        {
-            if (target != null)
-            {
-                Vector3 temp = new Vector3(target.position.x, this.transform.position.y, target.position.z);
-                this.transform.LookAt(temp);
-            }
         }
 
 
