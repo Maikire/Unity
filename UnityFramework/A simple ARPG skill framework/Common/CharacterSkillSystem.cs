@@ -70,7 +70,7 @@ namespace ARPGDemo.Skill
             //单体攻击时朝向目标
             if (Skill.AttackType == SkillAttackType.Single)
             {
-                LookAtTarget(Skill.AttackTargets?[0]);
+                this.transform.LookAtTarget(Skill.AttackTargets?[0]);
             }
         }
 
