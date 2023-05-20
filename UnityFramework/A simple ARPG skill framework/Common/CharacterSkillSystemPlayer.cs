@@ -29,11 +29,14 @@ namespace ARPGDemo.Skill
         {
             base.UseSkill(skillID, isBatter);
 
-            //禁止移动（攻击的优先级高于移动）
-            InputController.IsMove = false;
+            if (SuccessfullyUsed)
+            {
+                //禁止移动（攻击的优先级高于移动）
+                InputController.IsMove = false;
 
-            //选中目标
-            SelectCharacter.SelectTargets(Skill.AttackTargets);
+                //选中目标
+                SelectCharacter.SelectTargets(Skill.AttackTargets);
+            }
         }
 
         /// <summary>
