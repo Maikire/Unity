@@ -9,18 +9,19 @@ namespace ARPGDemo.Skill
     public class CharacterSkillSystemNPC : CharacterSkillSystem
     {
         /// <summary>
-        /// 使用随机技能
-        /// 为NPC提供
+        /// 获取随机技能
         /// </summary>
-        public void UseRandomSkill()
+        /// <returns></returns>
+        public SkillData GetRandomSkillData()
         {
             //先选出可以生成的技能，然后在生成随机数
             SkillData[] skillData = SkillManger.Skills.FindAll(s => SkillManger.PrepareSkill(s.SkillID) != null);
             if (skillData != null && skillData.Length > 0)
             {
                 int index = Random.Range(0, skillData.Length);
-                UseSkill(skillData[index].SkillID);
+                return skillData[index];
             }
+            return null;
         }
 
 
