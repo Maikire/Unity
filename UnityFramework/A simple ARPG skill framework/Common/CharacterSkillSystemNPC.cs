@@ -1,23 +1,13 @@
-using AI.FSM;
 using Common;
 using UnityEngine;
 
 namespace ARPGDemo.Skill
 {
-    [RequireComponent(typeof(FSMBase))]
     /// <summary>
     /// 为NPC提供的技能系统
     /// </summary>
     public class CharacterSkillSystemNPC : CharacterSkillSystem
     {
-        private FSMBase Fsm;
-
-        protected override void Awake()
-        {
-            base.Awake();
-            Fsm = this.GetComponent<FSMBase>();
-        }
-
         /// <summary>
         /// 使用随机技能
         /// 为NPC提供
