@@ -9,6 +9,7 @@ namespace ARPGDemo.Skill
     /// </summary>
     public abstract class CharacterSkillSystem : MonoBehaviour
     {
+        [HideInInspector]
         [Tooltip("最后一次释放的技能的数据")]
         public SkillData Skill;
         protected CharacterSkillManger SkillManger;
