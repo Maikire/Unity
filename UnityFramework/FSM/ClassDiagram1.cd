@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="AI.FSM.FSMBase">
+    <Position X="0.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAEAACAAAEAAAAAAACAEAhAgBBAAAAAIBAEASEQ=</HashCode>
+      <FileName>Assets\Scripts\FSM\Base\FSMBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AI.FSM.FSMState">
+    <Position X="5.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAQAABAIAEAAAAAAAAAQCAAAAAAAAAICAAQAAAA=</HashCode>
+      <FileName>Assets\Scripts\FSM\Base\FSMState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AI.FSM.FSMTrigger">
+    <Position X="9.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAgAAAAACAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\FSM\Base\FSMTrigger.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AI.FSM.IdleState" Collapsed="true">
+    <Position X="6.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\FSM\States\IdleState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AI.FSM.NoHealthTrigger" Collapsed="true">
+    <Position X="8.25" Y="4.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\FSM\Triggers\NoHealthTrigger.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AI.FSM.DeadState" Collapsed="true">
+    <Position X="4.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\FSM\States\DeadState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AI.FSM.ReviveTrigger" Collapsed="true">
+    <Position X="10.5" Y="3.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\FSM\Triggers\ReviveTrigger.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AI.FSM.AttackState" Collapsed="true">
+    <Position X="4.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAAAAAAQAAAAAQAIAgAgAAAAICAAAEAAA=</HashCode>
+      <FileName>Assets\Scripts\FSM\States\AttackState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AI.FSM.PursuitState" Collapsed="true">
+    <Position X="6.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAAAAAAAAAAAAQAAAAAAAAAAICAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\FSM\States\PursuitState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AI.FSM.FoundTargetTrigger" Collapsed="true">
+    <Position X="8.25" Y="5.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\FSM\Triggers\FoundTargetTrigger.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AI.FSM.LostTargetTrigger" Collapsed="true">
+    <Position X="10.5" Y="4.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\FSM\Triggers\LostTargetTrigger.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AI.FSM.KilledTargetTrigger" Collapsed="true">
+    <Position X="10.5" Y="5.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\FSM\Triggers\KilledTargetTrigger.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AI.FSM.ReachTargetTrigger" Collapsed="true">
+    <Position X="8.25" Y="3.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\FSM\Triggers\ReachTargetTrigger.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AI.FSM.PatrolState" Collapsed="true">
+    <Position X="5.5" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAQAIAAAAAAAAAAAAAAQEAAAAAAEAAMCAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\FSM\States\PatrolState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AI.FSM.CompletePatrolTrigger" Collapsed="true">
+    <Position X="8.25" Y="6.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\FSM\Triggers\CompletePatrolTrigger.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AI.FSM.PatrolTrigger" Collapsed="true">
+    <Position X="10.5" Y="6.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAACAAAEAAA=</HashCode>
+      <FileName>Assets\Scripts\FSM\Triggers\PatrolTrigger.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AI.FSM.FSMConfigReader" Collapsed="true">
+    <Position X="2.5" Y="2" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEABAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\FSM\Common\FSMConfigReader.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AI.FSM.FSMConfigReaderFactory" Collapsed="true">
+    <Position X="2.5" Y="2.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\FSM\Common\FSMConfigReaderFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AI.FSM.FSMCreateFactory" Collapsed="true">
+    <Position X="2.5" Y="3.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAAAAAQAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\FSM\Common\FSMCreateFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AI.FSM.FSMData" Collapsed="true">
+    <Position X="2.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAQAACAAgABAAABAKAAAAAAIIAgAAEAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\FSM\Common\FSMData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="AI.FSM.FSMStateID" Collapsed="true">
+    <Position X="5.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAAAAIAAAAIAAAAAAAAAASAAIAAA=</HashCode>
+      <FileName>Assets\Scripts\FSM\Common\FSMStateID.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="AI.FSM.FSMTriggerID" Collapsed="true">
+    <Position X="9.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAACAIAAAAAAAAQAAAAAgAAAAAAAAAEQAACQAA=</HashCode>
+      <FileName>Assets\Scripts\FSM\Common\FSMTriggerID.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="AI.FSM.FSMPatrolModes" Collapsed="true">
+    <Position X="2.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAQAAAAAAAAAAAQAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Assets\Scripts\FSM\Common\FSMPatrolModes.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Microsoft YaHei UI" Size="9.08" />
+</ClassDiagram>
