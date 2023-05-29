@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Default.PointerPressManger" Collapsed="true">
+    <Position X="8.25" Y="2.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAABCAAAAAAAAAAAAgAAAAACAAAAAAAAABAAEA=</HashCode>
+      <FileName>Assets\Scripts\UI\UI Framework\PointerPressManger.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Default.UIEventListener" Collapsed="true">
+    <Position X="8.25" Y="0.5" Width="2" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>gASgASiASoIYAAAAAQBAEAAAAQAhACQAAUBwQQQAIAQ=</HashCode>
+      <FileName>Assets\Scripts\UI\UI Framework\UIEventListener.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Orientation="Right" Position="0.134" />
+  </Class>
+  <Class Name="Default.UIManager">
+    <Position X="6.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACBAAAAAAAAAAAAAAAAAAAAAAAAAAECACAA=</HashCode>
+      <FileName>Assets\Scripts\UI\UI Framework\UIManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Default.UIWindow">
+    <Position X="4.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAEEAAAAAAAIAAIAQAAAAAAAAAAAAAAACAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\UI\UI Framework\UIWindow.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Default.UISettingWindow">
+    <Position X="4.5" Y="3.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAACAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\UI\UI Framework Test\UISettingWindow.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Default.UIStartWindow">
+    <Position X="2.5" Y="3.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAECAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\UI\UI Framework Test\UIStartWindow.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Default.UIController">
+    <Position X="2.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAACAAAAAAIAAAAAAAAAAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\UI\UI Framework\UIController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Default.UIInputController">
+    <Position X="0.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\UI\UI Framework\UIInputController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Default.UISettingWindow_1">
+    <Position X="6.5" Y="3.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\UI\UI Framework Test\UISettingWindow_1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Default.IPointerPressHandler" Collapsed="true">
+    <Position X="8.25" Y="1.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\UI\UI Framework\IPointerPressHandler.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Microsoft YaHei UI" Size="9.08" />
+</ClassDiagram>
