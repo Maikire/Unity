@@ -16,6 +16,7 @@ namespace AI.FSM
         /// true: 搜索目标的时候忽略墙体
         /// </summary>
         public virtual bool IgnoreWalls { get => false; }
+        
         /// <summary>
         /// 条件列表
         /// </summary>
