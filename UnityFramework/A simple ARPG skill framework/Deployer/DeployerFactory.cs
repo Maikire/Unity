@@ -27,7 +27,7 @@ namespace ARPGDemo.Skill
             else
             {
                 Type skillType = Type.GetType(className);
-                object temp = Activator.CreateInstance(skillType) as T;
+                object temp = Activator.CreateInstance(skillType);
                 Cache.Add(className, temp);
                 return temp as T;
             }
