@@ -10,7 +10,7 @@ namespace Default
     /// <summary>
     /// 所有窗口的父类
     /// </summary>
-    public class UIWindow : MonoBehaviour
+    public abstract class UIWindow : MonoBehaviour
     {
         /// <summary>
         /// 画布组
