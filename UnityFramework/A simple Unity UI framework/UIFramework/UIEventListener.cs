@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
-namespace Default
+namespace ARPGDemo.UI
 {
     [RequireComponent(typeof(PointerPressManger))]
     /// <summary>
@@ -22,24 +22,25 @@ namespace Default
         [Serializable]
         public class AxisEventHandler : UnityEvent<AxisEventData> { }
 
-        public PointerEventHandler PointerPress;
-        public PointerEventHandler PointerClick;
-        public PointerEventHandler PointerDown;
-        public PointerEventHandler PointerUp;
-        public PointerEventHandler PointerEnter;
-        public PointerEventHandler PointerExit;
-        public PointerEventHandler InitializePotentialDrag;
-        public PointerEventHandler BeginDrag;
-        public PointerEventHandler Drag;
-        public PointerEventHandler EndDrag;
-        public PointerEventHandler Drop;
-        public PointerEventHandler Scroll;
-        public BaseEventHandler UpdateSelected;
-        public BaseEventHandler Select;
-        public BaseEventHandler Deselect;
-        public BaseEventHandler Submit;
-        public BaseEventHandler Cancel;
-        public AxisEventHandler Move;
+        //使用了 C# 9 新引入的 Target-typed new 表达式语法。省略对构造函数的显式调用
+        public PointerEventHandler PointerPress = new();
+        public PointerEventHandler PointerClick = new();
+        public PointerEventHandler PointerDown = new();
+        public PointerEventHandler PointerUp = new();
+        public PointerEventHandler PointerEnter = new();
+        public PointerEventHandler PointerExit = new();
+        public PointerEventHandler InitializePotentialDrag = new();
+        public PointerEventHandler BeginDrag = new();
+        public PointerEventHandler Drag = new();
+        public PointerEventHandler EndDrag = new();
+        public PointerEventHandler Drop = new();
+        public PointerEventHandler Scroll = new();
+        public BaseEventHandler UpdateSelected = new();
+        public BaseEventHandler Select = new();
+        public BaseEventHandler Deselect = new();
+        public BaseEventHandler Submit = new();
+        public BaseEventHandler Cancel = new();
+        public AxisEventHandler Move = new();
 
         /// <summary>
         /// 获取UI事件监听器
