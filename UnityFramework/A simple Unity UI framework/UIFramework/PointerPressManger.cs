@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-namespace Default
+namespace ARPGDemo.UI
 {
     /// <summary>
     /// 按下按钮时一直执行
@@ -14,13 +14,13 @@ namespace Default
         private void Awake()
         {
             EventListener = this.GetComponent<UIEventListener>();
+            this.enabled = false;
         }
 
         private void Start()
         {
             EventListener.PointerDown.AddListener(OnTurnOn);
             EventListener.PointerUp.AddListener(OnTurnOff);
-            this.enabled = false;
         }
 
         private void Update()
