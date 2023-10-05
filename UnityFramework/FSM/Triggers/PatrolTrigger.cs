@@ -21,6 +21,11 @@ namespace AI.FSM
 
         public override bool HandleTrigger(FSMBase fsm)
         {
+            if (fsm.Data.PatrolMode == FSMPatrolModes.None)
+            {
+                return false;
+            }
+            
             Timer += Time.deltaTime;
 
             if (Timer >= 1)
