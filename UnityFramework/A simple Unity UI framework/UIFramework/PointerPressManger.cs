@@ -14,13 +14,13 @@ namespace ARPGDemo.UI
         private void Awake()
         {
             EventListener = this.GetComponent<UIEventListener>();
-            this.enabled = false;
         }
 
         private void Start()
         {
-            EventListener.PointerDown.AddListener(OnTurnOn);
-            EventListener.PointerUp.AddListener(OnTurnOff);
+            EventListener.onPointerDown.AddListener(OnTurnOn);
+            EventListener.onPointerUp.AddListener(OnTurnOff);
+            this.enabled = false;
         }
 
         private void Update()
@@ -47,7 +47,6 @@ namespace ARPGDemo.UI
             EventData = eventData;
             this.enabled = false;
         }
-
 
     }
 }
