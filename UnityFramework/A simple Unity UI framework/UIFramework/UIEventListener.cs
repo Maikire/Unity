@@ -23,24 +23,24 @@ namespace ARPGDemo.UI
         public class AxisEventHandler : UnityEvent<AxisEventData> { }
 
         //使用了 C# 9 新引入的 Target-typed new 表达式语法。省略对构造函数的显式调用
-        public PointerEventHandler PointerPress = new();
-        public PointerEventHandler PointerClick = new();
-        public PointerEventHandler PointerDown = new();
-        public PointerEventHandler PointerUp = new();
-        public PointerEventHandler PointerEnter = new();
-        public PointerEventHandler PointerExit = new();
-        public PointerEventHandler InitializePotentialDrag = new();
-        public PointerEventHandler BeginDrag = new();
-        public PointerEventHandler Drag = new();
-        public PointerEventHandler EndDrag = new();
-        public PointerEventHandler Drop = new();
-        public PointerEventHandler Scroll = new();
-        public BaseEventHandler UpdateSelected = new();
-        public BaseEventHandler Select = new();
-        public BaseEventHandler Deselect = new();
-        public BaseEventHandler Submit = new();
-        public BaseEventHandler Cancel = new();
-        public AxisEventHandler Move = new();
+        public PointerEventHandler onPointerPress = new();
+        public PointerEventHandler onPointerClick = new();
+        public PointerEventHandler onPointerDown = new();
+        public PointerEventHandler onPointerUp = new();
+        public PointerEventHandler onPointerEnter = new();
+        public PointerEventHandler onPointerExit = new();
+        public PointerEventHandler onInitializePotentialDrag = new();
+        public PointerEventHandler onBeginDrag = new();
+        public PointerEventHandler onDrag = new();
+        public PointerEventHandler onEndDrag = new();
+        public PointerEventHandler onDrop = new();
+        public PointerEventHandler onScroll = new();
+        public BaseEventHandler onUpdateSelected = new();
+        public BaseEventHandler onSelect = new();
+        public BaseEventHandler onDeselect = new();
+        public BaseEventHandler onSubmit = new();
+        public BaseEventHandler onCancel = new();
+        public AxisEventHandler onMove = new();
 
         /// <summary>
         /// 获取UI事件监听器
@@ -59,94 +59,93 @@ namespace ARPGDemo.UI
 
         public void OnPointerPress(PointerEventData eventData)
         {
-            PointerPress?.Invoke(eventData);
+            onPointerPress?.Invoke(eventData);
         }
 
         public void OnPointerClick(PointerEventData eventData)
         {
-            PointerClick?.Invoke(eventData);
+            onPointerClick?.Invoke(eventData);
         }
 
         public void OnPointerDown(PointerEventData eventData)
         {
-            PointerDown?.Invoke(eventData);
+            onPointerDown?.Invoke(eventData);
         }
 
         public void OnPointerUp(PointerEventData eventData)
         {
-            PointerUp?.Invoke(eventData);
+            onPointerUp?.Invoke(eventData);
         }
 
         public void OnPointerEnter(PointerEventData eventData)
         {
-            PointerEnter?.Invoke(eventData);
+            onPointerEnter?.Invoke(eventData);
         }
 
         public void OnPointerExit(PointerEventData eventData)
         {
-            PointerExit?.Invoke(eventData);
+            onPointerExit?.Invoke(eventData);
         }
 
         public void OnInitializePotentialDrag(PointerEventData eventData)
         {
-            InitializePotentialDrag?.Invoke(eventData);
+            onInitializePotentialDrag?.Invoke(eventData);
         }
 
         public void OnBeginDrag(PointerEventData eventData)
         {
-            BeginDrag?.Invoke(eventData);
+            onBeginDrag?.Invoke(eventData);
         }
 
         public void OnDrag(PointerEventData eventData)
         {
-            Drag?.Invoke(eventData);
+            onDrag?.Invoke(eventData);
         }
 
         public void OnEndDrag(PointerEventData eventData)
         {
-            EndDrag?.Invoke(eventData);
+            onEndDrag?.Invoke(eventData);
         }
 
         public void OnDrop(PointerEventData eventData)
         {
-            Drop?.Invoke(eventData);
+            onDrop?.Invoke(eventData);
         }
 
         public void OnScroll(PointerEventData eventData)
         {
-            Scroll?.Invoke(eventData);
+            onScroll?.Invoke(eventData);
         }
 
         public void OnUpdateSelected(BaseEventData eventData)
         {
-            UpdateSelected?.Invoke(eventData);
+            onUpdateSelected?.Invoke(eventData);
         }
 
         public void OnSelect(BaseEventData eventData)
         {
-            Select?.Invoke(eventData);
+            onSelect?.Invoke(eventData);
         }
 
         public void OnDeselect(BaseEventData eventData)
         {
-            Deselect?.Invoke(eventData);
+            onDeselect?.Invoke(eventData);
         }
 
         public void OnSubmit(BaseEventData eventData)
         {
-            Submit?.Invoke(eventData);
+            onSubmit?.Invoke(eventData);
         }
 
         public void OnCancel(BaseEventData eventData)
         {
-            Cancel?.Invoke(eventData);
+            onCancel?.Invoke(eventData);
         }
 
         public void OnMove(AxisEventData eventData)
         {
-            Move?.Invoke(eventData);
+            onMove?.Invoke(eventData);
         }
-
 
     }
 }
