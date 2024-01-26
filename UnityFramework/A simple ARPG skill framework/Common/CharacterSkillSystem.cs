@@ -78,12 +78,11 @@ namespace ARPGDemo.Skill
             //播放动画
             Anim.SetBool(Skill.AnimationName, true);
 
-            //查找目标
-            Skill.AttackTargets = FindTargets();
-
             //单体攻击时朝向目标
             if (Skill.AttackType == SkillAttackType.Single)
             {
+                //查找目标
+                Skill.AttackTargets = FindTargets();
                 this.transform.LookAtTarget(Skill.AttackTargets?[0]);
             }
 
