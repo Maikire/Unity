@@ -42,15 +42,6 @@ namespace ARPGDemo.UI
         public BaseEventHandler onCancel = new();
         public AxisEventHandler onMove = new();
 
-        private void Start()
-        {
-            this.TryGetComponent<Button>(out Button button);
-            if (button != null)
-            {
-                button.onClick.AddListener(() => { onPointerClick?.Invoke(null); });
-            }
-        }
-
         /// <summary>
         /// 获取UI事件监听器
         /// </summary>
