@@ -1,5 +1,5 @@
 using Character;
-using Skill;
+using SkillSystem;
 using Common;
 using System;
 using System.Collections.Generic;
