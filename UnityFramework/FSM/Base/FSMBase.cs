@@ -1,5 +1,5 @@
-using ARPGDemo.Character;
-using ARPGDemo.Skill;
+using Character;
+using Skill;
 using Common;
 using System;
 using System.Collections.Generic;
