@@ -27,8 +27,8 @@ namespace AI.FSM
         {
             Map = new Dictionary<string, Dictionary<string, string>>();
 
-            string configfile = ConfigReader.GetConfigFile(path);
-            ConfigReader.ReadConfigFile(configfile, BulidLine);
+            string configfile = ConfigReader.GetConfig(path);
+            ConfigReader.ReadConfig(configfile, BulidLine);
         }
 
         /// <summary>
