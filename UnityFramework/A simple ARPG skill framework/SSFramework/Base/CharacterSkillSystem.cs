@@ -48,11 +48,10 @@ namespace SkillSystem
         /// 使用技能
         /// </summary>
         /// <param name="skillID">技能ID</param>
-        /// <param name="isBatter">是否连击</param>
-        public virtual void UseSkill(int skillID, bool isBatter = false)
+        public virtual void UseSkill(int skillID)
         {
             //是否连击
-            if (isBatter && Skill != null)
+            if (Skill != null && Skill.IsBatter)
             {
                 skillID = Skill.NextBatterID;
             }
@@ -127,3 +126,4 @@ namespace SkillSystem
 
     }
 }
+
