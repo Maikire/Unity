@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SkillSystem.CharacterSkillManger">
+    <Position X="4.5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAACAAAAAAAAAAAAAEAAAQCAAAAAAAAABECEA=</HashCode>
+      <FileName>Assets\Scripts\SkillSystem\Common\CharacterSkillManger.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SkillSystem.SkillData" Collapsed="true">
+    <Position X="6.75" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAADCOEAAgCFAAAkRAAASBEABAAgARIAAIMABMDAA=</HashCode>
+      <FileName>Assets\Scripts\SkillSystem\Common\SkillData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SkillSystem.DeployerFactory" Collapsed="true">
+    <Position X="8.75" Y="1.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAAAAAAAAAAAAAQAgAAAAAAQAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\SkillSystem\Deployer\DeployerFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SkillSystem.SkillDeployer">
+    <Position X="10.75" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAEAAIAAAAAAQACAAAAAgAAACIAAAIAAAAAAAIE=</HashCode>
+      <FileName>Assets\Scripts\SkillSystem\Deployer\SkillDeployer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SkillSystem.MeleeAttackSkillDeployer" Collapsed="true">
+    <Position X="12" Y="5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>Assets\Scripts\SkillSystem\SkillDeployer\MeleeAttackSkillDeployer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SkillSystem.SectorAttackSelector" Collapsed="true">
+    <Position X="14.5" Y="1.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\SkillSystem\Selectors\SectorAttackSelector.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SkillSystem.CostMPImpact" Collapsed="true">
+    <Position X="14.5" Y="2.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\SkillSystem\ImpactEffects\CostMPImpact.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SkillSystem.CharacterSkillSystem">
+    <Position X="2.25" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAACACAAEBAAQAAAEAAAAAAAAgAgAAAAAAEAAEA=</HashCode>
+      <FileName>Assets\Scripts\SkillSystem\Common\CharacterSkillSystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SkillSystem.DamageImpact" Collapsed="true">
+    <Position X="14.5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>ACACAAAAAAAAAAQAQAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\SkillSystem\ImpactEffects\DamageImpact.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SkillSystem.RemoteAttackSkillDeployer" Collapsed="true">
+    <Position X="9" Y="5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAARAAAAIAAAAAAAAAAIAIAAAAAAAE=</HashCode>
+      <FileName>Assets\Scripts\SkillSystem\SkillDeployer\RemoteAttackSkillDeployer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.1" />
+  </Class>
+  <Class Name="SkillSystem.CharacterSkillSystemNPC" Collapsed="true">
+    <Position X="0.5" Y="4.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\SkillSystem\Character\CharacterSkillSystemNPC.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SkillSystem.CharacterSkillSystemPlayer" Collapsed="true">
+    <Position X="3.75" Y="4.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\SkillSystem\Character\CharacterSkillSystemPlayer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SkillSystem.SkillAttackedTarget" Collapsed="true">
+    <Position X="8.75" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAACAAAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\SkillSystem\Common\SkillAttackedTarget.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="SkillSystem.IImpactEffect" Collapsed="true">
+    <Position X="12.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\SkillSystem\ImpactEffects\IImpactEffect.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SkillSystem.IAttackSelector" Collapsed="true">
+    <Position X="12.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\SkillSystem\Selectors\IAttackSelector.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SkillSystem.IMovable" Collapsed="true">
+    <Position X="12.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\SkillSystem\Deployer\IMovable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="SkillSystem.SkillAttackType" Collapsed="true">
+    <Position X="6.75" Y="1.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\SkillSystem\Common\SkillAttackType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SkillSystem.SkillDeployType" Collapsed="true">
+    <Position X="6.75" Y="2" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAACIAACAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\SkillSystem\Common\SkillDeployType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SkillSystem.SkillSelectorType" Collapsed="true">
+    <Position X="6.75" Y="2.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\SkillSystem\Common\SkillSelectorType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Microsoft YaHei UI" Size="9.08" />
+</ClassDiagram>
