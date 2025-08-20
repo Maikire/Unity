@@ -17,9 +17,9 @@ namespace SkillSystem
             base.Start();
         }
 
-        public override void UseSkill(int skillID, bool isBatter = false)
+        public override void UseSkill(int skillID)
         {
-            base.UseSkill(skillID, isBatter);
+            base.UseSkill(skillID);
         }
 
 
