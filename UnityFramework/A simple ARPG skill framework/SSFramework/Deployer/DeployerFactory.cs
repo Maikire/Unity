@@ -40,8 +40,8 @@ namespace SkillSystem
         /// <returns></returns>
         public static IAttackSelector CreateAttackSelector(SkillData skillData)
         {
-            //选区对象命名规则：ARPGDemo.Skill. + SelectorType + AttackSelector
-            string selectorClassName = String.Format("ARPGDemo.Skill.{0}AttackSelector", skillData.SelectorType);
+            //选区对象命名规则：SkillSystem. + SelectorType + AttackSelector
+            string selectorClassName = String.Format("SkillSystem.{0}AttackSelector", skillData.SelectorType);
             return CreateObject<IAttackSelector>(selectorClassName);
         }
 
@@ -52,16 +52,16 @@ namespace SkillSystem
         /// <returns></returns>
         public static IImpactEffect[] CreateImpactEffects(SkillData skillData)
         {
-            //影响效果对象命名规则：ARPGDemo.Skill. + ImpactType[?] + Impact
+            //影响效果对象命名规则：SkillSystem. + ImpactType[i] + Impact
             IImpactEffect[] Impacts = new IImpactEffect[skillData.ImpactType.Length];
             for (int i = 0; i < skillData.ImpactType.Length; i++)
             {
-                string impactClassName = String.Format("ARPGDemo.Skill.{0}Impact", skillData.ImpactType[i]);
+                string impactClassName = String.Format("SkillSystem.{0}Impact", skillData.ImpactType[i]);
                 Impacts[i] = CreateObject<IImpactEffect>(impactClassName);
             }
             return Impacts;
         }
 
-
     }
 }
+
