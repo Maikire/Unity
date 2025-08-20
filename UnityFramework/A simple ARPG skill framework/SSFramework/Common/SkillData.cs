@@ -70,6 +70,9 @@ namespace SkillSystem
         [Tooltip("技能影响类型")]
         public string[] ImpactType = { "CostSP", "Damage" };
 
+        [Tooltip("是否连击")]
+        public bool IsBatter;
+        
         [Tooltip("连击的下一个技能ID")]
         public int NextBatterID;
 
@@ -127,3 +130,4 @@ namespace SkillSystem
 
     }
 }
+
