@@ -36,6 +36,8 @@ namespace SkillSystem
         /// </summary>
         private void InitSkill()
         {
+            if (Skills == null || Skills.Length == 0) return;
+            
             foreach (var skill in Skills)
             {
                 skill.Prefab = ResourceManager.Load<GameObject>(skill.PrefabName);
@@ -92,3 +94,4 @@ namespace SkillSystem
 
     }
 }
+
