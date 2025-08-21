@@ -36,7 +36,6 @@ namespace SkillSystem
         private void SetSkillData()
         {
             SkillData.TargetPosition = SkillData.Owner.transform.TransformPoint(0, 0, SkillData.MoveDistance);
-            SkillData.JudgeTransform = this.transform;
             SkillData.AttackedTargets.Clear();
         }
 
@@ -51,7 +50,7 @@ namespace SkillSystem
         /// <returns></returns>
         private IEnumerator ToRecover()
         {
-            while (Vector3.Distance(SkillData.JudgeTransform.position, SkillData.TargetPosition) > 0.1f)
+            while (Vector3.Distance(this.transform.position, SkillData.TargetPosition) > 0.1f)
             {
                 yield return null;
             }
@@ -86,6 +85,7 @@ namespace SkillSystem
 
             SkillData.AttackTargets = AllImpactTargets.Count == 0 ? null : AllImpactTargets.ToArray();
         }
+
 
 
     }
