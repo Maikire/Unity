@@ -52,10 +52,6 @@ namespace SkillSystem
         [Tooltip("移动到目标地点")]
         public Vector3 TargetPosition;
 
-        [HideInInspector]
-        [Tooltip("用于判断移动的点")]
-        public Transform JudgeTransform;
-
         [Tooltip("攻击目标 的 标签")]
         public string[] AttackTargetTags = { "Enemy" };
 
@@ -130,4 +126,5 @@ namespace SkillSystem
 
     }
 }
+
 
