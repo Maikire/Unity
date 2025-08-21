@@ -55,11 +55,6 @@ namespace SkillSystem
                 skillID = LastSkill.NextBatterID;
             }
 
-            if (LastSkill != null)
-            {
-                Debug.Log(LastSkill.SkillID + " " + LastSkill.AnimationName);
-            }
-
             //判断动画的播放状态
             if (LastSkill != null && Anim.GetBool(LastSkill.AnimationName))
             {
@@ -134,3 +129,4 @@ namespace SkillSystem
 
     }
 }
+
