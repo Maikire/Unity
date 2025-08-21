@@ -9,16 +9,17 @@ namespace SkillSystem
     /// </summary>
     public abstract class CharacterSkillSystem : MonoBehaviour
     {
-        [HideInInspector]
-        [Tooltip("最后一次释放的技能的数据")]
-        public SkillData Skill;
         protected CharacterSkillManager SkillManager;
         protected AnimationEventBehaviour EventBehaviour;
-        private Animator Anim;
         /// <summary>
         /// true: 技能成功释放
         /// </summary>
         protected bool SuccessfullyUsed;
+        /// <summary>
+        /// 最后一次释放的技能的数据
+        /// </summary>
+        private SkillData LastSkill;
+        private Animator Anim;
 
         //处理特殊情况：在一个技能释放的过程中释放其他技能
         //MOBA、拳皇等游戏会使用队列（或列表）
@@ -37,9 +38,7 @@ namespace SkillSystem
 
         protected virtual void Start()
         {
-            Skill = null; //脚本挂在物体上就会生成一个 SkillData 对象，这个对象没有任何意义
             SuccessfullyUsed = false;
-
             EventBehaviour.onMeleeAttack.AddListener(DeploySkill);
             EventBehaviour.onRangedAttack.AddListener(DeploySkill);
         }
@@ -51,38 +50,43 @@ namespace SkillSystem
         public virtual void UseSkill(int skillID)
         {
             //是否连击
-            if (Skill != null && Skill.IsBatter)
+            if (LastSkill != null && LastSkill.IsBatter)
             {
-                skillID = Skill.NextBatterID;
+                skillID = LastSkill.NextBatterID;
+            }
+
+            if (LastSkill != null)
+            {
+                Debug.Log(LastSkill.SkillID + " " + LastSkill.AnimationName);
             }
 
             //判断动画的播放状态
-            if (Skill != null && Anim.GetBool(Skill.AnimationName))
+            if (LastSkill != null && Anim.GetBool(LastSkill.AnimationName))
             {
                 SuccessfullyUsed = false;
                 return;
             }
 
             //准备技能
-            Skill = SkillManager.PrepareSkill(skillID);
-            if (Skill == null)
+            LastSkill = SkillManager.PrepareSkill(skillID);
+            if (LastSkill == null)
             {
                 SuccessfullyUsed = false;
                 return;
             }
 
             //技能冷却
-            SkillManager.StartCoroutine(SkillManager.CoolTimer(Skill));
+            SkillManager.StartCoroutine(SkillManager.CoolTimer(LastSkill));
 
             //播放动画
-            Anim.SetBool(Skill.AnimationName, true);
+            Anim.SetBool(LastSkill.AnimationName, true);
 
             //单体攻击时朝向目标
-            if (Skill.AttackType == SkillAttackType.Single)
+            if (LastSkill.AttackType == SkillAttackType.Single)
             {
                 //查找目标
-                Skill.AttackTargets = FindTargets();
-                this.transform.LookAtTarget(Skill.AttackTargets?[0]);
+                LastSkill.AttackTargets = FindTargets();
+                this.transform.LookAtTarget(LastSkill.AttackTargets?[0]);
             }
 
             SuccessfullyUsed = true;
@@ -93,7 +97,7 @@ namespace SkillSystem
         /// </summary>
         protected virtual void DeploySkill()
         {
-            SkillManager.GenerateSkill(Skill, Skill.StartPosition, Skill.StartRotation);
+            SkillManager.GenerateSkill(LastSkill, LastSkill.StartPosition, LastSkill.StartRotation);
         }
 
         /// <summary>
@@ -104,8 +108,13 @@ namespace SkillSystem
         /// <param name="startRotation">起始旋转</param>
         public void SetPosition(Vector3 startPosition, Quaternion startRotation)
         {
-            Skill.StartPosition = startPosition;
-            Skill.StartRotation = startRotation;
+            if (LastSkill == null)
+            {
+                return;
+            }
+
+            LastSkill.StartPosition = startPosition;
+            LastSkill.StartRotation = startRotation;
         }
 
         /// <summary>
@@ -118,12 +127,10 @@ namespace SkillSystem
             //虽然代码有重复，但是可以应对某些特殊情况：
             //按下技能键时攻击范围内没有目标，但是动画播放到某一帧并释放技能的时候，
             //攻击范围内有目标了，所以技能生成器中的代码是有必要的
-            IAttackSelector selector = DeployerFactory.CreateAttackSelector(Skill); //攻击选区
-            Transform[] targets = selector.SelectTarget(Skill, this.transform);
+            IAttackSelector selector = DeployerFactory.CreateAttackSelector(LastSkill); //攻击选区
+            Transform[] targets = selector.SelectTarget(LastSkill, this.transform);
             return targets == null || targets.Length == 0 ? null : targets;
         }
 
-
     }
 }
-
