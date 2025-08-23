@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="BehaviorTree.BTNode">
+    <Position X="9.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAiACAAAAAAAAQAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\BehaviorTree\BTFramework\BaseNode\BTNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BehaviorTree.SelectorNode" Collapsed="true">
+    <Position X="0.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAiEASAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\BehaviorTree\BTFramework\Composite\SelectorNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BehaviorTree.SequenceNode" Collapsed="true">
+    <Position X="2.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAiEASAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\BehaviorTree\BTFramework\Composite\SequenceNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BehaviorTree.ConditionNode">
+    <Position X="14.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\BehaviorTree\BTFramework\BaseNode\ConditionNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BehaviorTree.InverterNode" Collapsed="true">
+    <Position X="4.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACEAAAAACAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\BehaviorTree\BTFramework\Decorator\InverterNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BehaviorTree.RepeaterNode" Collapsed="true">
+    <Position X="6.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACEAAAAACAAAAAAAAAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>Assets\Scripts\BehaviorTree\BTFramework\Decorator\RepeaterNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BehaviorTree.ParallelNode" Collapsed="true">
+    <Position X="0.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAiEASAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\BehaviorTree\BTFramework\Composite\ParallelNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BehaviorTree.PriorityNode" Collapsed="true">
+    <Position X="2.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACEAAAAAAAAACAAAAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>Assets\Scripts\BehaviorTree\BTFramework\Composite\PriorityNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BehaviorTree.BTCreateFactory" Collapsed="true">
+    <Position X="6.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AARAIAAADAAABAAAAAEAAAAAAAAAAAEAAQAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\BehaviorTree\BTFramework\Common\BTCreateFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BehaviorTree.TimingNode" Collapsed="true">
+    <Position X="4.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAiEAAAAACAAAQAAAAAAACAQAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\BehaviorTree\BTFramework\Decorator\TimingNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BehaviorTree.BehaviorNode">
+    <Position X="9.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAA=</HashCode>
+      <FileName>Assets\Scripts\BehaviorTree\BTFramework\BaseNode\BehaviorNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BehaviorTree.BehaviorTree">
+    <Position X="0.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAQgAAEAAGAAAAAAAAAAAAAAAAAAAAAAAAhAAAAASEQ=</HashCode>
+      <FileName>Assets\Scripts\BehaviorTree\BTFramework\Base\BehaviorTree.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BehaviorTree.BTBlackboard" Collapsed="true">
+    <Position X="4.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAIABEAEAEAkAAAAACgAigACACQAAYCCQACAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\BehaviorTree\BTFramework\Common\BTBlackboard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BehaviorTree.SuccessNode" Collapsed="true">
+    <Position X="6.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACEAAAAACAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\BehaviorTree\BTFramework\Decorator\SuccessNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BehaviorTree.FilterNode" Collapsed="true">
+    <Position X="4.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAiEAAAAAAAEAQAAAAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>Assets\Scripts\BehaviorTree\BTFramework\Decorator\FilterNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BehaviorTree.LimiterNode" Collapsed="true">
+    <Position X="6.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAEAAAAAACEAAAAACAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\BehaviorTree\BTFramework\Decorator\LimiterNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BehaviorTree.FailureNode" Collapsed="true">
+    <Position X="4.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACEAAAAACAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\BehaviorTree\BTFramework\Decorator\FailureNode.cs</FileName>
+      <NewMemberFileName>Assets\Scripts\BehaviorTree\BTFramework\Base\ControlNodes.cs</NewMemberFileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BehaviorTree.ControlNodes">
+    <Position X="3.25" Y="3.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\BehaviorTree\BTFramework\BaseNode\ControlNodes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BehaviorTree.IdleBehavior" Collapsed="true">
+    <Position X="8.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAA=</HashCode>
+      <FileName>Assets\Scripts\BehaviorTree\Nodes\Behavior\IdleBehavior.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BehaviorTree.PatrolBehavior" Collapsed="true">
+    <Position X="11" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAIAAiAAAAAAAAAAQAEAAAAAAEAAEAAAQAAAA=</HashCode>
+      <FileName>Assets\Scripts\BehaviorTree\Nodes\Behavior\PatrolBehavior.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BehaviorTree.PursuitBehavior" Collapsed="true">
+    <Position X="8.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAA=</HashCode>
+      <FileName>Assets\Scripts\BehaviorTree\Nodes\Behavior\PursuitBehavior.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BehaviorTree.AttackBehavior" Collapsed="true">
+    <Position X="9.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAiAAAAAQAAACQAAIAAAgAgAAACAAQAAAA=</HashCode>
+      <FileName>Assets\Scripts\BehaviorTree\Nodes\Behavior\AttackBehavior.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BehaviorTree.DeadBehavior" Collapsed="true">
+    <Position X="11" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAiAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAA=</HashCode>
+      <FileName>Assets\Scripts\BehaviorTree\Nodes\Behavior\DeadBehavior.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BehaviorTree.DeathCondition" Collapsed="true">
+    <Position X="14.25" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\BehaviorTree\Nodes\Condition\DeathCondition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BehaviorTree.FoundTargetCondition" Collapsed="true">
+    <Position X="13" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\BehaviorTree\Nodes\Condition\FoundTargetCondition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BehaviorTree.BTAsset" Collapsed="true">
+    <Position X="4.5" Y="1.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\BehaviorTree\BTFramework\Common\BTAsset.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BehaviorTree.LostTargetCondition" Collapsed="true">
+    <Position X="15.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\BehaviorTree\Nodes\Condition\LostTargetCondition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="BehaviorTree.BTFilter" Collapsed="true">
+    <Position X="2.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\BehaviorTree\BTFramework\Common\BTFilter.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Enum Name="BehaviorTree.BTState" Collapsed="true">
+    <Position X="2.5" Y="1.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAAAAAAAAAAAgAAAACIAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\BehaviorTree\BTFramework\Common\BTState.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="BehaviorTree.BTPatrolModes" Collapsed="true">
+    <Position X="2.5" Y="2" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAQAAAAAAAAAAAQAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Assets\Scripts\BehaviorTree\BTFramework\Common\BTPatrolModes.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Microsoft YaHei UI" Size="9.08" />
+</ClassDiagram>
