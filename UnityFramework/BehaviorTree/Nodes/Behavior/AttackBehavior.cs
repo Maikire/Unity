@@ -55,6 +55,8 @@ namespace BehaviorTree
         private void Init(BehaviorTree bt)
         {
             timer = bt.blackboard.attackTimeInterval;
+            GetSkill(bt);
+            
             isInit = true;
         }
 
@@ -131,3 +133,4 @@ namespace BehaviorTree
 
     }
 }
+
