@@ -104,7 +104,13 @@ namespace UI
         {
             if (!UIEventDic.ContainsKey(UIName))
             {
-                UIEventListener uiEventListener = UIEventListener.GetListener(this.transform.FindChildByName(UIName));
+                Transform item = this.transform.FindChildByName(UIName);
+                if (item == null)
+                {
+                    throw new Exception($"UI Name \"{UIName}\" not found");
+                }
+
+                UIEventListener uiEventListener = UIEventListener.GetListener(item);
                 UIEventDic.Add(UIName, uiEventListener);
                 return uiEventListener;
             }
@@ -117,3 +123,4 @@ namespace UI
 
     }
 }
+
