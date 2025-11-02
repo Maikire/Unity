@@ -11,15 +11,13 @@ namespace UI
         private UIEventListener EventListener;
         private PointerEventData EventData;
 
-        private void Awake()
-        {
-            EventListener = this.GetComponent<UIEventListener>();
-        }
-
         private void Start()
         {
+            EventListener = this.GetComponent<UIEventListener>();
+            
             EventListener.onPointerDown.AddListener(OnTurnOn);
             EventListener.onPointerUp.AddListener(OnTurnOff);
+            
             this.enabled = false;
         }
 
@@ -50,3 +48,4 @@ namespace UI
 
     }
 }
+
