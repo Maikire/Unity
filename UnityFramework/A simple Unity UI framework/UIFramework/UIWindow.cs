@@ -39,16 +39,11 @@ namespace UI
         {
             this.gameObject.SetActive(state);
 
-            if (UIController.Instance.UICanvasStack.Count == 0)
-            {
-                return;
-            }
-
             if (state)
             {
                 UIController.Instance.UICanvasStack.Push(this);
             }
-            else
+            else if (UIController.Instance.UICanvasStack.Count != 0)
             {
                 UIController.Instance.UICanvasStack.Pop();
             }
@@ -129,5 +124,6 @@ namespace UI
 
     }
 }
+
 
 
