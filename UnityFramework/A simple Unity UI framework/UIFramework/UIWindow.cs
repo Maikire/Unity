@@ -38,6 +38,12 @@ namespace UI
         public void SetVisible(bool state)
         {
             this.gameObject.SetActive(state);
+
+            if (UIController.Instance.UICanvasStack.Count == 0)
+            {
+                return;
+            }
+
             if (state)
             {
                 UIController.Instance.UICanvasStack.Push(this);
@@ -123,4 +129,5 @@ namespace UI
 
     }
 }
+
 
