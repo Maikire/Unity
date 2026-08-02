@@ -68,6 +68,9 @@ namespace SkillSystem
         [Tooltip("连击的下一个技能ID")]
         public int NextBatterID;
 
+        [Tooltip("连击的起始技能ID")]
+        public int StartBatterID;
+
         [Tooltip("可触发连击/蓄力的最短时间")]
         public float BatterTimeMin;
 
