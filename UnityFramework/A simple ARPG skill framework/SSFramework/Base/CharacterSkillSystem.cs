@@ -50,7 +50,7 @@ namespace SkillSystem
         public virtual void UseSkill(int skillID)
         {
             //是否连击
-            if (LastSkill != null && LastSkill.IsBatter)
+            if (LastSkill != null && LastSkill.IsBatter && skillID == LastSkill.StartBatterID)
             {
                 skillID = LastSkill.NextBatterID;
             }
