@@ -1,4 +1,5 @@
 using Common;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace SkillSystem
@@ -11,6 +12,7 @@ namespace SkillSystem
     {
         protected CharacterSkillManager SkillManager;
         protected AnimationEventBehaviour EventBehaviour;
+
         /// <summary>
         /// true: 技能成功释放
         /// </summary>
@@ -19,6 +21,11 @@ namespace SkillSystem
         /// 最后一次释放的技能的数据
         /// </summary>
         private SkillData LastSkill;
+        /// <summary>
+        /// 连击技能列表
+        /// </summary>
+        private List<SkillData> BatterSkills;
+
         private Animator Anim;
 
         //处理特殊情况：在一个技能释放的过程中释放其他技能
@@ -39,6 +46,7 @@ namespace SkillSystem
         protected virtual void Start()
         {
             SuccessfullyUsed = false;
+            BatterSkills = new List<SkillData>();
             EventBehaviour.onMeleeAttack.AddListener(DeploySkill);
             EventBehaviour.onRangedAttack.AddListener(DeploySkill);
         }
@@ -50,9 +58,10 @@ namespace SkillSystem
         public virtual void UseSkill(int skillID)
         {
             //是否连击
-            if (LastSkill != null && LastSkill.IsBatter && skillID == LastSkill.StartBatterID)
+            SkillData bs = BatterSkills.Find(a => a.StartBatterID == skillID);
+            if (bs != null)
             {
-                skillID = LastSkill.NextBatterID;
+                skillID = bs.NextBatterID;
             }
 
             //判断动画的播放状态
@@ -85,6 +94,16 @@ namespace SkillSystem
             }
 
             SuccessfullyUsed = true;
+
+            if (bs != null)
+            {
+                BatterSkills.Remove(bs);
+            }
+
+            if (LastSkill.IsBatter)
+            {
+                BatterSkills.Add(LastSkill);
+            }
         }
 
         /// <summary>
