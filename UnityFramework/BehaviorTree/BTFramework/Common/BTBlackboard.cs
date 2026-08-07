@@ -46,21 +46,6 @@ namespace BehaviorTree
         [HideInInspector]
         [Tooltip("根节点")]
         public BTNode root;
-        /// <summary>
-        /// 当前节点
-        /// </summary>
-        public BTNode Current
-        {
-            get
-            {
-                if (nodeStack.Count == 0)
-                {
-                    return null;
-                }
-
-                return nodeStack.Peek();
-            }
-        }
 
         [HideInInspector]
         [Tooltip("角色的信息")]
@@ -77,6 +62,22 @@ namespace BehaviorTree
         [HideInInspector]
         [Tooltip("当前的技能")]
         public SkillData currentSkill;
+
+        /// <summary>
+        /// 当前节点
+        /// </summary>
+        public BTNode Current
+        {
+            get
+            {
+                if (nodeStack.Count == 0)
+                {
+                    return null;
+                }
+
+                return nodeStack.Peek();
+            }
+        }
 
     }
 }
