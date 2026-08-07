@@ -34,33 +34,33 @@ namespace BehaviorTree
         [Tooltip("巡逻的路点")]
         public Transform[] wayPoints;
 
-        [HideInInspector]
         [Tooltip("外部中断条件")]
+        [HideInInspector]
         public List<Func<bool>> interruptions;
-        [HideInInspector]
         [Tooltip("节点栈")]
+        [HideInInspector]
         public Stack<BTNode> nodeStack;
-        [HideInInspector]
         [Tooltip("优先级节点")]
-        public BTNode priorityNode;
         [HideInInspector]
+        public BTNode priorityNode;
         [Tooltip("根节点")]
+        [HideInInspector]
         public BTNode root;
 
-        [HideInInspector]
-        [Tooltip("角色的信息")]
-        public CharacterStatus character;
-        [HideInInspector]
-        [Tooltip("角色的动画")]
-        public Animator anim;
-        [HideInInspector]
         [Tooltip("发现的目标")]
+        [HideInInspector]
         public Transform[] foundTargets;
+        [Tooltip("角色的动画")]
         [HideInInspector]
+        public Animator anim;
+        [Tooltip("角色的信息")]
+        [HideInInspector]
+        public CharacterStatus character;
         [Tooltip("技能系统")]
-        public CharacterSkillSystemNPC npcSkill;
         [HideInInspector]
+        public CharacterSkillSystemNPC npcSkill;
         [Tooltip("当前的技能")]
+        [HideInInspector]
         public SkillData currentSkill;
 
         /// <summary>
