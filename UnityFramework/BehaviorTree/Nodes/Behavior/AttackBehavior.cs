@@ -91,7 +91,7 @@ namespace BehaviorTree
         private BTState Attack(BehaviorTree bt)
         {
             // 看向目标
-            bt.transform.LookAt(bt.blackboard.foundTargets[0]);
+            bt.transform.LookAtTarget(bt.blackboard.foundTargets[0]);
 
             timer += Time.deltaTime;
             if (timer >= bt.blackboard.attackTimeInterval)
