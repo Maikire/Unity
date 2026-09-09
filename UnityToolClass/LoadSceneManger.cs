@@ -64,11 +64,6 @@ namespace Common
         /// </summary>
         private IEnumerator LoadTransitionScene()
         {
-            if (!SceneManager.GetSceneByName(TransitionScene).IsValid())
-            {
-                yield break;
-            }
-
             yield return SceneManager.LoadSceneAsync(TransitionScene, LoadSceneMode.Single);
         }
 
