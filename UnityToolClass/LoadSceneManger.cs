@@ -11,6 +11,10 @@ namespace Common
     public class LoadSceneManger : MonoSingleton<LoadSceneManger>
     {
         /// <summary>
+        /// 过度场景
+        /// </summary>
+        private string TransitionScene = "TransitionScene";
+        /// <summary>
         /// 异步加载
         /// </summary>
         private List<AsyncOperation> operations;
@@ -60,7 +64,12 @@ namespace Common
         /// </summary>
         private IEnumerator LoadTransitionScene()
         {
-            yield return SceneManager.LoadSceneAsync("TransitionScene", LoadSceneMode.Single);
+            if (!SceneManager.GetSceneByName(TransitionScene).IsValid())
+            {
+                yield break;
+            }
+
+            yield return SceneManager.LoadSceneAsync(TransitionScene, LoadSceneMode.Single);
         }
 
         /// <summary>
