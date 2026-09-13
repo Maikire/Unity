@@ -71,7 +71,6 @@ namespace Common
         /// <summary>
         /// 回收物体
         /// </summary>
-        /// <param name="gameObjectKey">物体类型</param>
         /// <param name="gameObject">物体</param>
         public void RecoverGameObject(GameObject gameObject)
         {
@@ -135,7 +134,7 @@ namespace Common
         /// <summary>
         /// 清空某一类别
         /// </summary>
-        /// <param name="gameObjectKey"></param>
+        /// <param name="gameObjectKey">物体类型</param>
         public void Clear(string gameObjectKey)
         {
             //字典、队列等数据结构 存储的都是引用，这些都不占内存
