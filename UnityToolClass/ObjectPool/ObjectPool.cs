@@ -79,14 +79,44 @@ namespace Common
         }
 
         /// <summary>
-        /// 延迟回收物体
+        /// 回收某类物体
         /// </summary>
         /// <param name="gameObjectKey">物体类型</param>
+        public void RecoverGameObjects(string gameObjectKey)
+        {
+            if (GameObjectDIC.ContainsKey(gameObjectKey))
+            {
+                foreach (GameObject item in GameObjectDIC[gameObjectKey])
+                {
+                    item.SetActive(false);
+                }
+            }
+        }
+
+        /// <summary>
+        /// 延迟回收物体
+        /// </summary>
         /// <param name="gameObject">物体</param>
         /// <param name="delay">延迟时间（秒）</param>
         public void RecoverGameObject(GameObject gameObject, float delay)
         {
             StartCoroutine(DelayRecover(gameObject, delay));
+        }
+
+        /// <summary>
+        /// 延迟回收某类物体
+        /// </summary>
+        /// <param name="gameObjectKey">物体类型</param>
+        /// <param name="delay">延迟时间（秒）</param>
+        public void RecoverGameObjects(string gameObjectKey, float delay)
+        {
+            if (GameObjectDIC.ContainsKey(gameObjectKey))
+            {
+                foreach (GameObject item in GameObjectDIC[gameObjectKey])
+                {
+                    StartCoroutine(DelayRecover(item, delay));
+                }
+            }
         }
 
         /// <summary>
