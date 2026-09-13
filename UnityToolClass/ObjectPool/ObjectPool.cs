@@ -78,6 +78,16 @@ namespace Common
         }
 
         /// <summary>
+        /// 延迟回收物体
+        /// </summary>
+        /// <param name="gameObject">物体</param>
+        /// <param name="delay">延迟时间（秒）</param>
+        public void RecoverGameObject(GameObject gameObject, float delay)
+        {
+            StartCoroutine(DelayRecover(gameObject, delay));
+        }
+
+        /// <summary>
         /// 回收某类物体
         /// </summary>
         /// <param name="gameObjectKey">物体类型</param>
@@ -90,16 +100,6 @@ namespace Common
                     item.SetActive(false);
                 }
             }
-        }
-
-        /// <summary>
-        /// 延迟回收物体
-        /// </summary>
-        /// <param name="gameObject">物体</param>
-        /// <param name="delay">延迟时间（秒）</param>
-        public void RecoverGameObject(GameObject gameObject, float delay)
-        {
-            StartCoroutine(DelayRecover(gameObject, delay));
         }
 
         /// <summary>
