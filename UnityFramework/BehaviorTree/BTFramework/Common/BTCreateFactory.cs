@@ -203,15 +203,14 @@ namespace BehaviorTree
         /// <returns></returns>
         private static BTFilter CreateFilter(string token)
         {
-            Match match = Regex.Match(token, "^\\{([A-Za-z]+)\\[\\d+\\],([A-Za-z]+\\[\\d+\\](?:\\{(?:[0-9]+(?:[.][0-9]+){0,1})\\})?)\\}$");
+            Match match = Regex.Match(token, "^\\{([A-Za-z]+\\[\\d+\\]),([A-Za-z]+\\[\\d+\\](?:\\{(?:[0-9]+(?:[.][0-9]+){0,1})\\})?)\\}$");
 
             if (!match.Success)
             {
                 throw new Exception($"无效的格式: {token}");
             }
 
-            Type type = GetType($"BehaviorTree.{match.Groups[1].Value}");
-            ConditionNode cond = Activator.CreateInstance(type) as ConditionNode;
+            ConditionNode cond = CreateNode(match.Groups[1].Value) as ConditionNode;
 
             BTNode node = CreateNode(match.Groups[2].Value);
 
