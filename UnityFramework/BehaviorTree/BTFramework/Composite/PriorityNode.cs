@@ -3,7 +3,7 @@ using System.Collections.Generic;
 namespace BehaviorTree
 {
     /// <summary>
-    /// 优先级节点（独立于主行为树，不在根节点及其子节点下，不可中断，每轮都会检测，成功时中断其他所有节点，执行优先级节点）
+    /// 优先级节点（独立于主行为树，每轮按添加顺序检查条件，高优先级子节点可抢占正在运行的低优先级子节点）
     /// </summary>
     public class PriorityNode : ControlNodes
     {
@@ -12,9 +12,9 @@ namespace BehaviorTree
         /// </summary>
         private List<BTFilter> filters;
         /// <summary>
-        /// 是否执行过子节点
+        /// 当前正在执行的优先级子节点
         /// </summary>
-        private bool isTickedChild = false;
+        private BTNode runningChild = null;
 
         public PriorityNode()
         {
@@ -31,37 +31,42 @@ namespace BehaviorTree
         {
             foreach (var item in filters)
             {
-                if (item.condition.TickNode(bt) == BTState.Success)
+                if (item.condition.TickNode(bt) != BTState.Success)
                 {
-                    if (State != BTState.Running)
-                    {
-                        bt.AbortAll();
-                        item.child.EnterNode(bt);
-                        isTickedChild = true;
-                    }
-
-                    State = item.child.TickNode(bt);
-
-                    // 优先级节点不会被低级节点打断，所以这里不需要处理中断
-                    if (State != BTState.Running)
-                    {
-                        item.child.ExitNode(bt);
-                        isTickedChild = false;
-                    }
-
-                    return State;
+                    continue;
                 }
-                else
+
+                // 切换分支或被外部中断后，需要重新进入选中的子节点
+                if (runningChild != item.child || !bt.blackboard.nodeStack.Contains(runningChild))
                 {
-                    if (isTickedChild)
-                    {
-                        item.child.Abort(bt);
-                        isTickedChild = false;
-                    }
+                    // 按执行栈中断旧分支及其正在运行的后代，再进入新分支
+                    bt.AbortAll();
+                    item.child.EnterNode(bt);
+                    runningChild = item.child;
                 }
+
+                State = item.child.TickNode(bt);
+
+                if (State != BTState.Running)
+                {
+                    item.child.ExitNode(bt);
+                    runningChild = null;
+                }
+
+                return State;
             }
 
-            isTickedChild = false;
+            // 所有条件都不成立时，中断实际运行的优先级分支，让主行为树继续
+            if (runningChild != null)
+            {
+                if (bt.blackboard.nodeStack.Contains(runningChild))
+                {
+                    bt.AbortAll();
+                }
+
+                runningChild = null;
+            }
+
             return State = BTState.Failure;
         }
 
