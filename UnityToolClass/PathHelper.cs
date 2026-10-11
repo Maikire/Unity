@@ -54,14 +54,14 @@ namespace Common
         /// </summary>
         /// <param name="path">StreamingAssets中的路径</param>
         /// <returns></returns>
-        public static string GetPath(string path)
+        public static string GetPath(string path, bool copyFromStreamingAssets = true)
         {
 #if UNITY_EDITOR
             return Application.streamingAssetsPath + path;
 
 #elif UNITY_ANDROID || UNITY_IPHONE
             string resPath = Application.persistentDataPath + path;
-            if (!File.Exists(resPath))
+            if (copyFromStreamingAssets && !File.Exists(resPath))
             {
                 CopyFile(path);
             }
@@ -73,7 +73,7 @@ namespace Common
         }
 
         /// <summary>
-        /// 将StreamingAssets中的文件拷贝到持久化路径中 path=StreamingAssets中的路径
+        /// 将 StreamingAssets 中的文件拷贝到持久化路径中 path=StreamingAssets 中的路径
         /// </summary>
         private static void CopyFile(string path)
         {
@@ -101,6 +101,29 @@ namespace Common
             }
         }
 
+        /// <summary>
+        /// 获取持久化路径
+        /// </summary>
+        /// <param name="path">持久化路径下的路径</param>
+        /// <returns></returns>
+        public static string GetPersistentDirectoryPath(string path)
+        {
+            string persistentPath = Path.Combine(Application.persistentDataPath, path);
+            Directory.CreateDirectory(persistentPath);
+            return persistentPath;
+        }
+
+        /// <summary>
+        /// 获取持久化路径下的文件路径
+        /// </summary>
+        /// <param name="path">持久化路径下的路径</param>
+        /// <param name="fileName">文件名</param>
+        /// <returns></returns>
+        public static string GetPersistentFilePath(string path, string fileName)
+        {
+            string directoryPath = GetPersistentDirectoryPath(path);
+            return Path.Combine(directoryPath, fileName);
+        }
+
     }
 }
-
