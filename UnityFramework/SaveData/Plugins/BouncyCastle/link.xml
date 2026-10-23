@@ -1,0 +1,4 @@
+<linker>
+    <!-- 保留 BouncyCastle 程序集中的全部类型和成员，避免代码裁剪影响加解密功能 -->
+    <assembly fullname="BouncyCastle.Cryptography" preserve="all" />
+</linker>

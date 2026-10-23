@@ -1,0 +1,476 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SaveData.SaveDataManager">
+    <Position X="0.5" Y="0.5" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="SaveData.SaveDataManager.ReadinessDeadline">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scripts\SaveData\SaveDataFramework\Core\SaveDataManager.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AGwgwIgwoEBACQYUiaRoRAAoAIMLIhBAIggGTgEREME=</HashCode>
+      <FileName>Assets\Scripts\SaveData\SaveDataFramework\Core\SaveDataManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SaveData.SaveDataOperationGate" Collapsed="true">
+    <Position X="3" Y="6" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAgAAA4IAAAAAIAAQAAAAAAAAAAAAAAAAAABAAAEA=</HashCode>
+      <FileName>Assets\Scripts\SaveData\SaveDataFramework\Core\SaveDataOperationGate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SaveData.SaveDataOptions" Collapsed="true">
+    <Position X="3" Y="8.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAgAICAAAEAARCCAAASAAABEAAAABAAACAgAAgAAEgA=</HashCode>
+      <FileName>Assets\Scripts\SaveData\SaveDataFramework\Core\SaveDataOptions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SaveData.SaveDataParticipant&lt;T&gt;" Collapsed="true">
+    <Position X="3" Y="10.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAACIAAACEAAIAEEAAAEAgJAAACAAACA=</HashCode>
+      <FileName>Assets\Scripts\SaveData\SaveDataFramework\Core\SaveDataParticipant.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.1" />
+  </Class>
+  <Class Name="SaveData.SaveDataRestoreException" Collapsed="true">
+    <Position X="3" Y="9" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>Assets\Scripts\SaveData\SaveDataFramework\Core\SaveDataRestoreException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SaveData.SaveDataResult" Collapsed="true">
+    <Position X="3" Y="6.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>BAAAQAAAAIAAAQAAAAAAAAAAAggAAAAAAAEAAQAAAAA=</HashCode>
+      <FileName>Assets\Scripts\SaveData\SaveDataFramework\Core\SaveDataResult.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SaveData.SaveSlotInfo" Collapsed="true">
+    <Position X="3" Y="7.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>IAAAQAAAEAAAAQAAACgAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\SaveData\SaveDataFramework\Core\SaveSlotInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SaveData.SystemSaveDataTimeService" Collapsed="true">
+    <Position X="3" Y="5.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\SaveData\SaveDataFramework\Core\SystemSaveDataTimeService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.1" />
+  </Class>
+  <Class Name="SaveData.MessagePackLz4SaveDataCompression" Collapsed="true">
+    <Position X="6.75" Y="2.25" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAKACAAAAAAEAAAAAAAAAIAgAAAAA=</HashCode>
+      <FileName>Assets\Scripts\SaveData\SaveDataFramework\Compression\MessagePackLz4SaveDataCompression.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.1" />
+  </Class>
+  <Class Name="SaveData.NoSaveDataCompression" Collapsed="true">
+    <Position X="6.75" Y="3.25" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABCAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\SaveData\SaveDataFramework\Compression\NoSaveDataCompression.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.1" />
+  </Class>
+  <Class Name="SaveData.Aes256GcmSaveDataEncryption" Collapsed="true">
+    <Position X="11" Y="2.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAIAIAQAAAAAAQAAAAAAAAAAAAAIEAAAAA=</HashCode>
+      <FileName>Assets\Scripts\SaveData\SaveDataFramework\Encryption\Aes256GcmSaveDataEncryption.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.1" />
+  </Class>
+  <Class Name="SaveData.LocalSaveDataKeyProvider" Collapsed="true">
+    <Position X="13.75" Y="1.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAEACQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\SaveData\SaveDataFramework\Encryption\LocalSaveDataKeyProvider.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.1" />
+  </Class>
+  <Class Name="SaveData.NoSaveDataEncryption" Collapsed="true">
+    <Position X="11" Y="4.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\SaveData\SaveDataFramework\Encryption\NoSaveDataEncryption.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.1" />
+  </Class>
+  <Class Name="SaveData.PreloadedSaveDataKeyProvider" Collapsed="true">
+    <Position X="13.75" Y="2.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAIAAAACAAAAAQAAAAAAAAAAACAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\SaveData\SaveDataFramework\Encryption\PreloadedSaveDataKeyProvider.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.1" />
+  </Class>
+  <Class Name="SaveData.XorSaveDataEncryption" Collapsed="true">
+    <Position X="11" Y="3.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAIAAAQAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\SaveData\SaveDataFramework\Encryption\XorSaveDataEncryption.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.1" />
+  </Class>
+  <Class Name="SaveData.SaveDataDocument" Collapsed="true">
+    <Position X="6.75" Y="9.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>YAAAAAAAAAAAAAAAACAAAAAUAAAAAAAIAAgAAAAEAAA=</HashCode>
+      <FileName>Assets\Scripts\SaveData\SaveDataFramework\Schema\SaveDataDocument.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SaveData.SaveDataMigrationPipeline" Collapsed="true">
+    <Position X="6.75" Y="10.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQgAAAAAAABBAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\SaveData\SaveDataFramework\Schema\SaveDataMigrationPipeline.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SaveData.SaveDataSchema" Collapsed="true">
+    <Position X="6.75" Y="8.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAACAAAAAAAAAAACIAAAAAAgAAAAAQAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\SaveData\SaveDataFramework\Schema\SaveDataSchema.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.1" />
+  </Class>
+  <Class Name="SaveData.JsonSaveDataSerializer" Collapsed="true">
+    <Position X="11" Y="10.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAAAAAAACBIAAAAgAEAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\SaveData\SaveDataFramework\Serialization\JsonSaveDataSerializer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.1" />
+  </Class>
+  <Class Name="SaveData.SaveDataFileSerializer" Collapsed="true">
+    <Position X="11" Y="11.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAIZQJhAAEACCBAACBICABAAAECAABAADA=</HashCode>
+      <FileName>Assets\Scripts\SaveData\SaveDataFramework\Serialization\SaveDataFileSerializer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.1" />
+  </Class>
+  <Class Name="SaveData.SaveDataSerializerFactory" Collapsed="true">
+    <Position X="11" Y="8.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAQAAAA=</HashCode>
+      <FileName>Assets\Scripts\SaveData\SaveDataFramework\Serialization\SaveDataSerializerFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SaveData.FileSaveDataStorage" Collapsed="true">
+    <Position X="26" Y="1.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAggAIAAAAAQCAAAEBAAwBIgACEDKIAAAABECAGAAIE=</HashCode>
+      <FileName>Assets\Scripts\SaveData\SaveDataFramework\Storage\FileSaveDataStorage.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.1" />
+  </Class>
+  <Class Name="SaveData.SynchronizedFileSaveDataStorage" Collapsed="true">
+    <Position X="26" Y="3" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAgAIAAAAAACAAAEBAAgAAAAAAiIAAAAABBgAAAAIE=</HashCode>
+      <FileName>Assets\Scripts\SaveData\SaveDataFramework\Storage\SynchronizedFileSaveDataStorage.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.1" />
+  </Class>
+  <Class Name="SaveData.SaveDataPersistenceException" Collapsed="true">
+    <Position X="26" Y="0.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\SaveData\SaveDataFramework\Storage\SaveDataPersistenceException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SaveData.ServerSaveDataStorage" Collapsed="true">
+    <Position X="26" Y="4" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAgAIAAAAAAAAAAEBAAgAAAAAAAIAAAAABIAAAAAIE=</HashCode>
+      <FileName>Assets\Scripts\SaveData\SaveDataFramework\Storage\ServerSaveDataStorage.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.1" />
+  </Class>
+  <Class Name="SaveData.Examples.PreloadedSaveDataOptionsProvider" Collapsed="true">
+    <Position X="15.75" Y="10.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\SaveData\SaveDataFramework\Unity\PreloadedSaveDataOptionsProvider.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.1" />
+  </Class>
+  <Class Name="SaveData.SaveDataImplementationReference" Collapsed="true">
+    <Position X="15.75" Y="9.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAACAAAAAAIAAAVAAAAAAEAQAAAQAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\SaveData\SaveDataFramework\Unity\SaveDataImplementationReference.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SaveData.SaveDataMainLoopTimer" Collapsed="true">
+    <Position X="18.75" Y="10.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAQBAAAAAAAAAAAAAAAAAAAABEBAAAAAAAAAAAAAACA=</HashCode>
+      <FileName>Assets\Scripts\SaveData\SaveDataFramework\Unity\SaveDataMainLoopTimer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SaveData.SaveDataPathHelper" Collapsed="true">
+    <Position X="18.75" Y="7" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>Assets\Scripts\SaveData\SaveDataFramework\Unity\SaveDataPathHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SaveData.SaveDataSettings" Collapsed="true">
+    <Position X="15.75" Y="8.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>IEgEABBADAkABIBAAEAIgQAEAEQoiAACAAAQIAAIAAA=</HashCode>
+      <FileName>Assets\Scripts\SaveData\SaveDataFramework\Unity\SaveDataSettings.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SaveData.SaveDataUnityBridge" Collapsed="true">
+    <Position X="18.75" Y="7.75" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACCAAAQAAAAAACAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\SaveData\SaveDataFramework\Unity\SaveDataUnityBridge.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SaveData.UnityMainLoopSaveDataTimeService" Collapsed="true">
+    <Position X="18.75" Y="8.75" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\SaveData\SaveDataFramework\Unity\UnityMainLoopSaveDataTimeService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.1" />
+  </Class>
+  <Class Name="SaveData.UnityWebSaveDataFileSynchronizer" Collapsed="true">
+    <Position X="18.75" Y="9.75" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\SaveData\SaveDataFramework\Unity\UnityWebSaveDataFileSynchronizer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.1" />
+  </Class>
+  <Class Name="SaveData.Example.SaveDataExampleParticipant" Collapsed="true">
+    <Position X="6.75" Y="12" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAACEAAAAAAIAAAAAAAAEAAAAAAAAAEAgIAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\SaveData\Example\SaveDataExampleParticipant.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SaveData.Example.SaveDataExampleProgress" Collapsed="true">
+    <Position X="6.75" Y="14.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAAAACAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\SaveData\Example\SaveDataExampleProgress.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SaveData.Example.SaveDataExampleRuntime" Collapsed="true">
+    <Position X="6.75" Y="13.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAAAACAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\SaveData\Example\SaveDataExampleProgress.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SaveData.Example.SaveDataExampleRunner" Collapsed="true">
+    <Position X="6.75" Y="15.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAFAAAAALAAAAIQAAQAAAAAAAAAAAhDAACAhABABEI=</HashCode>
+      <FileName>Assets\Scripts\SaveData\Example\SaveDataExampleRunner.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SaveData.Example.SaveDataExamples" Collapsed="true">
+    <Position X="6.75" Y="13" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAQAAAAAAAQAAAAAAAAAAAAAAIAAAAAAAAACAEAA=</HashCode>
+      <FileName>Assets\Scripts\SaveData\Example\SaveDataExamples.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SaveData.SaveDataJson" Collapsed="true">
+    <Position X="11" Y="9.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAIEAAAAAAAAIQAgAAAAE=</HashCode>
+      <FileName>Assets\Scripts\SaveData\SaveDataFramework\Serialization\SaveDataJson.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="SaveData.ISaveDataMetadataParticipant" Collapsed="true">
+    <Position X="3" Y="2" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\SaveData\SaveDataFramework\Core\ISaveDataMetadataParticipant.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SaveData.ISaveDataOptionsProvider" Collapsed="true">
+    <Position X="15.75" Y="7.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\SaveData\SaveDataFramework\Unity\ISaveDataOptionsProvider.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SaveData.ISaveDataParticipant" Collapsed="true">
+    <Position X="3" Y="2.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACIAAACEAAIAAEAAAAAAJAAACAAAAA=</HashCode>
+      <FileName>Assets\Scripts\SaveData\SaveDataFramework\Core\ISaveDataParticipant.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SaveData.ISaveDataSnapshotMergeParticipant" Collapsed="true">
+    <Position X="3" Y="4.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\SaveData\SaveDataFramework\Core\ISaveDataSnapshotMergeParticipant.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SaveData.ISaveDataTimeService" Collapsed="true">
+    <Position X="3" Y="3.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\SaveData\SaveDataFramework\Core\ISaveDataTimeService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SaveData.ISaveDataCompression" Collapsed="true">
+    <Position X="6.75" Y="1.25" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\SaveData\SaveDataFramework\Compression\ISaveDataCompression.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SaveData.ISaveDataEncryption" Collapsed="true">
+    <Position X="11" Y="1.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\SaveData\SaveDataFramework\Encryption\ISaveDataEncryption.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SaveData.ISaveDataKeyProvider" Collapsed="true">
+    <Position X="13.75" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\SaveData\SaveDataFramework\Encryption\ISaveDataKeyProvider.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SaveData.ISaveDataMigration" Collapsed="true">
+    <Position X="6.75" Y="7" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\SaveData\SaveDataFramework\Schema\ISaveDataMigration.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SaveData.ISaveDataSchema" Collapsed="true">
+    <Position X="6.75" Y="7.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAACAAAAAAAAAAACIAAAAAAgAAAAAQAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\SaveData\SaveDataFramework\Schema\ISaveDataSchema.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SaveData.ISaveDataSerializer" Collapsed="true">
+    <Position X="11" Y="7.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACBAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\SaveData\SaveDataFramework\Serialization\ISaveDataSerializer.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SaveData.ISaveDataFileSynchronizer" Collapsed="true">
+    <Position X="23.25" Y="1.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\SaveData\SaveDataFramework\Storage\ISaveDataFileSynchronizer.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SaveData.ISaveDataReader" Collapsed="true">
+    <Position X="19" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>Assets\Scripts\SaveData\SaveDataFramework\Storage\ISaveDataReader.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SaveData.ISaveDataStorage" Collapsed="true">
+    <Position X="20.5" Y="1.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEBAAgAAAAAAAIAAAAABAAAAAAIA=</HashCode>
+      <FileName>Assets\Scripts\SaveData\SaveDataFramework\Storage\ISaveDataStorage.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SaveData.ISaveDataStoragePersistence" Collapsed="true">
+    <Position X="23.25" Y="2" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\SaveData\SaveDataFramework\Storage\ISaveDataStoragePersistence.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SaveData.IServerSaveDataBackend" Collapsed="true">
+    <Position X="17.5" Y="1.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\SaveData\SaveDataFramework\Storage\IServerSaveDataBackend.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SaveData.ISynchronousSaveDataStorage" Collapsed="true">
+    <Position X="20.5" Y="3" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAAAAAAAAAAgACEAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Assets\Scripts\SaveData\SaveDataFramework\Storage\ISynchronousSaveDataStorage.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="SaveData.SaveDataErrorCode" Collapsed="true">
+    <Position X="3" Y="1.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAEAAADAAAAAAAAABAIAAAABAAAgAACgAAAEAAAA=</HashCode>
+      <FileName>Assets\Scripts\SaveData\SaveDataFramework\Core\SaveDataErrorCode.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SaveData.SaveDataState" Collapsed="true">
+    <Position X="3" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAEIAAAAAICAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\SaveData\SaveDataFramework\Core\SaveDataState.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SaveData.SaveDataCompressionMode" Collapsed="true">
+    <Position X="6.75" Y="0.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEAAAA=</HashCode>
+      <FileName>Assets\Scripts\SaveData\SaveDataFramework\Compression\SaveDataCompressionMode.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SaveData.SaveDataEncryptionMode" Collapsed="true">
+    <Position X="11" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAAAAAAAAAAAAACgAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Assets\Scripts\SaveData\SaveDataFramework\Encryption\SaveDataEncryptionMode.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SaveData.SaveDataFileFormat" Collapsed="true">
+    <Position X="11" Y="7" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAIAAAAAgA=</HashCode>
+      <FileName>Assets\Scripts\SaveData\SaveDataFramework\Serialization\SaveDataFileFormat.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SaveData.SaveDataPersistenceScope" Collapsed="true">
+    <Position X="23.25" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAEAAAAAAAAAAAAAAIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\SaveData\SaveDataFramework\Storage\SaveDataPersistenceScope.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SaveData.SaveDataKeyProviderMode" Collapsed="true">
+    <Position X="15.75" Y="7" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\SaveData\SaveDataFramework\Unity\SaveDataKeyProviderMode.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Microsoft YaHei UI" Size="9" />
+</ClassDiagram>

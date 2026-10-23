@@ -1,0 +1,9 @@
+<linker>
+    <!--
+    保留当前 LZ4 管线使用的静态 byte 数组 formatter 及全部成员
+    项目扩展 MessagePack 处理类型时需要补充对应 formatter 的保留规则
+    -->
+    <assembly fullname="MessagePack">
+        <type fullname="MessagePack.Formatters.ByteArrayFormatter" preserve="all" />
+    </assembly>
+</linker>

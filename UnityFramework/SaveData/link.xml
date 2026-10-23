@@ -1,0 +1,9 @@
+<linker>
+    <!--
+    保留默认程序集中的 SaveData 类型及全部成员，供 Newtonsoft DTO 转换和契约解析使用    
+    其他命名空间的项目 DTO 或自定义程序集需要由项目补充对应规则
+    -->
+    <assembly fullname="Assembly-CSharp">
+        <type fullname="SaveData.*" preserve="all" />
+    </assembly>
+</linker>
